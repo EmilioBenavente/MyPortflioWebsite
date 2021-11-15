@@ -19,7 +19,7 @@ const engineTag = require('../assets/EngineVideo.mp4');
 const blogsTag = require('../assets/BlogsVideo.mp4');
 
 
-
+let curPath = '/Home'
 const routes = [
     {
         path: '/',
@@ -30,14 +30,12 @@ const routes = [
 	name: 'About',
 	component: AboutContent,
 	beforeEnter: (to, from, next) => {
-	    console.log('Before -> ' + window.SpaceTag);
             window.SpaceTag = aboutSpaceTag;
 	    var vid = document.getElementById('SpaceVideo');
 	    vid.src = window.SpaceTag;
             window.MainTag = aboutTag;
 	    var vid2 = document.getElementById('ShowVideo');
 	    vid2.src = window.MainTag;
-	    console.log('After -> ' + window.SpaceTag);
 	    next();
       }
     },
@@ -46,14 +44,12 @@ const routes = [
 	name: 'Projects',
 	component: Projects,
 	beforeEnter: (to, from, next) => {
-	    console.log('Before -> ' + window.SpaceTag);	    
             window.SpaceTag = projectsSpaceTag;
    	    var vid = document.getElementById('SpaceVideo');
 	    vid.src = window.SpaceTag;
             window.MainTag = projectsTag;
 	    var vid2 = document.getElementById('ShowVideo');
 	    vid2.src = window.MainTag;
-	    console.log('After -> ' + window.SpaceTag);
 	    next();
 	}
     },
@@ -62,14 +58,12 @@ const routes = [
 	name: 'Home',
 	component: HomeContent,
 	beforeEnter: (to, from, next) => {
-	    console.log('Before -> ' + window.SpaceTag);
           window.SpaceTag = homeSpaceTag;
 	    var vid = document.getElementById('SpaceVideo');
 	    vid.src = window.SpaceTag;
 	    window.MainTag = homeTag;
 	    var vid2 = document.getElementById('ShowVideo');
 	    vid2.src = window.MainTag;
-	    console.log('After -> ' + window.SpaceTag);
 	    next();
 	}	
     },
@@ -78,15 +72,12 @@ const routes = [
 	name: 'Engine',
 	component: Engine,
 	beforeEnter: (to, from, next) => {
-	    console.log('Before -> ' + window.SpaceTag);	    
             window.SpaceTag = engineSpaceTag;
 	    var vid = document.getElementById('SpaceVideo');
 	    vid.src = window.SpaceTag;
 	    window.MainTag = engineTag;
 	    var vid2 = document.getElementById('ShowVideo');
 	    vid2.src = window.MainTag;
-
-	    console.log('After -> ' + window.SpaceTag);
 	    next();
 	}	
     },
@@ -95,14 +86,12 @@ const routes = [
 	name: 'Blogs',
 	component: Blogs,
 	beforeEnter: (to, from, next) => {
-	    console.log('Before -> ' + window.SpaceTag);
             window.SpaceTag = blogsSpaceTag;
 	    var vid = document.getElementById('SpaceVideo');
 	    vid.src = window.SpaceTag;
 	    window.MainTag = blogsTag;
 	    var vid2 = document.getElementById('ShowVideo');
 	    vid2.src = window.MainTag;
-	    console.log('After -> ' + window.SpaceTag);
 	    next();
 	}	
     }
