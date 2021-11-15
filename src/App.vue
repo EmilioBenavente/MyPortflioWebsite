@@ -36,7 +36,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;    
-    z-index: -1;
+    z-index: -4;
   }
   
   .isScroll{
