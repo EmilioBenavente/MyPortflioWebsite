@@ -46,7 +46,10 @@
     border-top: 5px solid #FFFFFF;
     border-bottom: 5px solid #FFFFFF;
   }
-  
+  .Show{
+    display: inline-block;
+  }
+
 @media screen and (max-device-width: 599px) {
   .pageTitle{
     text-align: left;
