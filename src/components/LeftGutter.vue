@@ -1,0 +1,21 @@
+<template>
+  <div class='LeftGutterClass'>
+    Hello World!
+  </div>
+</template>
+
+<script>
+   export default {
+    name: 'LeftGutter',
+}
+</script>
+
+<style scoped>
+  .LeftGutterClass{
+    background-image: url('../assets/Gutter.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 15%;
+    height: auto;
+  }
+</style>

@@ -1,0 +1,94 @@
+<template>
+  <div class='fullBar'>
+    <div class='ButtonBarClass'>
+      <ul>
+	<router-link to='./About'><li>About</li></router-link>
+	<router-link to='./Projects'><li>Projects</li></router-link>
+	<router-link to='./Home'><li>Home</li></router-link>
+	<router-link to='./Engine'><li>Game Engine</li></router-link>
+	<router-link to='./Blogs'><li>Blogs</li></router-link>    
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script>
+   export default {
+    name: 'Buttons',
+}
+</script>
+
+<style scoped>
+  .fullBar{
+    width: 100%;
+    background-color: #000000;
+    height: 25px;
+    position: relative;
+    top: 250px;
+    z-index: 2;
+  }
+  .ButtonBarClass{
+    z-index: 2;
+    display: flex;
+    position: relative;
+    width: 70%;
+    height: 60px;
+    left: 15%;
+    top: -20px;
+  }
+
+  li{
+    color: #FFFFFF;
+  }
+  
+  ul{
+    list-style-type: none;
+    width: 100%;
+  }
+  
+  ul li{
+    padding-top: 20px;
+    background-color: #000000;
+    border-radius: 15%;
+    margin: 0 5%;
+    text-align: center;
+    height: 100%;
+    width: 10%;
+    position: relative;
+    float: left;
+  }
+  li:hover{
+    cursor: pointer;
+    background-color: #505050;
+  }
+
+@media screen and (max-device-width: 599px) {
+  .fullBar{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    top: 100px;
+  }
+  .ButtonBarClass{
+    width: 100%;
+    height: 40px;
+    left: 0%;
+    top: -20px;
+  }
+  ul li{
+    font-size: 10px;
+    color: #BBBB00;
+    background-color: #505050;
+    width: 14%;
+    margin: 0 3%;
+    padding-top: 1px;    
+  }
+}
+@media screen and (min-device-width: 600px) {
+  ul li{
+      width: 14%;
+      margin: 0 3%;
+      font-size: 14px;
+  }
+}
+</style>

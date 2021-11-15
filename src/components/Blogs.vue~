@@ -1,0 +1,111 @@
+ <template>
+  <div class='BlogClass'>
+
+    <div v-for='c of contents' :key='c.id'>
+
+      <div class='Button' @click='c.expanded = !c.expanded'>
+	<div class='Title'>
+	  <h2 class='HeaderText'>{{c.title}}</h2>
+
+	  <span class='Arrow' v-if='c.expanded'>&#x2191;</span>
+	  <span class='Arrow' v-else>&#x2193;</span>	  
+      </div>
+	</div>
+      <div class='Info' v-if='c.expanded'>
+        <img class='Image' :src='c.imgPath' />
+        <p class='Text'>{{c.body}}</p>
+      </div>
+    </div>
+      
+  </div>
+</template>
+
+<script>
+const contents =
+      [{
+	  id: 0,
+	  title: 'Topic #??',
+          body: 'We are working on this page, we will update this soon...',
+	  imgPath: require('../assets/Profile2.jpeg'),
+          expanded: false,
+       }
+      ];
+
+      
+  export default {
+      name: 'Blogs',
+      data() { return { contents,}; },
+};
+</script>
+
+<style scoped>
+  .BlogClass{
+    background-image: linear-gradient(to bottom, #000000, #999999);
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 50px 10px;
+  }
+  
+  .Info{
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 100px 100px 10px 100px;
+    border: 10px groove #303030;
+    min-height: 300px;   
+  }  
+
+  .Image{
+    position: relative;
+    top: -80px;
+    left: 30px;
+    float: right;
+    width: 30%;
+    height: 200px;
+  }
+
+  .HeaderText{
+    text-shadow: 4px 4px #000033;    
+    color: #00DD00;
+    margin-left: 20px;
+  }
+  
+  .Text{
+    position: relative;
+    max-width: 75%;
+    top: -80px;
+    left: -80px;
+    background-color: #202020;
+    border-radius: 4%;
+    padding: 4px;
+  }
+  .Button{
+    color: #000000;
+    font-size: 20px;
+    border: 3px dashed #303030;
+  }
+
+  .Title{
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .Title:hover{
+      cursor: pointer;
+      background-color: #505050;
+  }
+
+  h1{
+    padding: 2px 20px;
+  }
+
+  .Arrow{
+    padding: 10px 20px;
+  }
+  .Text >>> a, .Text >>> a:visited{
+    border-radius:15%;
+    border: 5px solid #000000;
+    background-color: #222222;
+    color: #00BB00;
+  }
+</style>

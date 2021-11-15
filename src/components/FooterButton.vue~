@@ -1,0 +1,43 @@
+<template>
+  <span class='FooterButton'>
+    <h2>User@Web:~/{{this.$route.name}}$_________________________________</h2>
+  </span>
+</template>
+
+<script>
+  export default {
+    name: 'FooterButton',
+}
+</script>
+
+<style scoped>
+.FooterButton{    
+    font-size: 15px;
+    letter-spacing: 4px;
+    background-color: #000000;
+    display: inline-block;
+    position: relative;
+    width: 52%;
+    height: 75%;
+    padding: 5px 20px;
+    padding-top: 12px;
+    border-radius: 12%;
+    overflow: hidden;
+}
+
+@media screen and (max-device-width: 825px) {
+    .FooterButton{
+	width: 50%;	
+	font-size: 8px;
+	width: 75%;
+	padding-top: 20px;	
+    }
+}
+@media screen and (min-device-width: 825px) and (max-device-width: 1025px){
+    .FooterButton{
+	font-size: 12px;
+	padding-top: 15px;
+    }
+}
+  
+</style>

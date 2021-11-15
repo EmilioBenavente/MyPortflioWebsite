@@ -1,0 +1,20 @@
+<template>
+  <div class='RightGutterClass'>
+  </div>
+</template>
+
+<script>
+   export default {
+    name: 'RightGutter',
+}
+</script>
+
+<style>
+  .RightGutterClass{
+  background-image: url('../assets/Gutter.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;  
+    height: auto;
+    width: 15%;
+  }
+</style>

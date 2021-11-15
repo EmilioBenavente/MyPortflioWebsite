@@ -1,0 +1,30 @@
+<template>
+  <div class='CenterClass'>
+    <LeftGutter />
+    <slot></slot>
+    <RightGutter />
+  </div>
+</template>
+
+<script>
+  import LeftGutter from './LeftGutter'
+  import RightGutter from './RightGutter'  
+  export default {
+    name: 'Center',
+    components: {
+      LeftGutter,
+      RightGutter
+    }
+}
+</script>
+
+<style scoped>
+  .CenterClass{
+    display: flex;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    min-height: 1000px;
+    height: auto;
+  }
+</style>

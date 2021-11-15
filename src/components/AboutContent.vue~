@@ -1,0 +1,105 @@
+<template>
+  <div class='HomeClass'>
+    <div class='Info'>
+      <h2 class='HeaderText'>Emilio Benavente</h2>
+      <img src='../assets/Profile2.jpeg' alt='Profile Picture' class='Image' />
+      <div class='Text'>
+        <p>Hello fellow visitor! My name is Emilio Benavente and even though I graduated with a Software Development Degree at Full Sail University, I consider myself to be a Game Developer. My journey began in the early days of elementary school. It was around the second grade when I was given the assignment to create my own board game with any material I could find. As I looked around, I saw some paper, a pencil, and the game of <i>Risk</i>. Now, I must explain that at this point in my life, I did not know how to play the game <i>Risk</i>; however, my teacher at the time didn't beleive this to be true as the game I had eventually created got me into a lecture about plagiarism. It appears that I had used the pieces from the game <i>Risk</i> to design the very game that the pieces were designed for, with an included space-style map from the paper and pencil of course. However, truth be told, I knew nothing about this game. I simply used the game's pieces in a way that made sense. This moment in history is what surged my passion for Design/Development. However, even at that time, I had notice the subtle decline of the board game industry and understood that I needed to prepare for a newer generation of entertainment. That's when I started researching about video games and my research has been non-stop! Unfortunately for me, I have a bad habit that has slowed down my progress in making games. If you've done any research on recent video games, you might notice that some games are considerably easier to make nowadays thanks to Game Engines. In fact, kids as young as 10 years old are releasing their own fully made games on mobile devices. So, where are my completed games at? The answer is complicated. You see my problem lies with the amount of care I have for the projects that I do. When I got into Game Development I became proficient in programming. However, the problem with using Game Engines is that most of functionality(the code) is hidden inside the Engine itself. Thus, the fact that I did not make the code means I cannot guarantee that the code is as good as it could be and so I cannot guarantee that the game I am making is as good as it could be. Sad to say, this idea of hiding functionality is very popular amongst programmers and has made finding such information very difficult. This has lead me down a rabbit hole of learning algorithms and slowed my game design progress down tremendously. However, since I have decided to take the voyage for the faint of heart, I am returning with great knowledge of the art of Game Design/Game Development along with some pointers that few programmers are equiped with. So that is where my journey is right now, if you are intersted to see the work I have done, then you can check the <i>Projects</i> tab at the top of the webpage. I also recommend the <i>Game Engine</i> tab. This is currently my most passionate project and if you've read through this you can understand why. If you have any questions for me or want to contact me for any reason you can email me with the link below. Thank you for reading this page and I hope you enjoy the rest of the content I have to show on this website! :)</p>
+      </div>
+       <a class='Email' href = "mailto: emiliocbenavente@gmail.com">Email me here!</a>
+    </div>
+  </div>
+</template>
+
+<script>
+   export default {
+    name: 'MainContent',
+}
+</script>
+
+<style scoped>
+  .HomeClass{
+    background-image: linear-gradient(to bottom, #000000, #FFFFFF);
+    position: relative;
+    width: 100%;
+  }
+  
+  .HeaderText{
+    position: relative;
+    left: 15%;
+    width: 70%;
+    margin-bottom: 100px;
+    text-shadow: 4px 4px #000033;    
+    color: #00DD00;
+    font-size: 64px;
+  }
+  
+  .Info{
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 40px;
+    border: 10px groove #303030;
+  }  
+
+  .Image{
+    position: relative;
+    top: -50px;
+    left: 30%;
+    width: 45%;
+    height: 300px;
+    border-radius: 20%;
+  }
+  
+  .Text{
+    position: relative;
+    top: -20px;
+    background-color: #202020;
+    border-radius: 4%;
+    padding: 15px;
+  }
+
+  .Email{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  a{
+    text-align: center;
+    color: #00BB00;
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    width: 160px;
+    border-radius:15%;
+    border: 5px solid #000000;
+    background-color: #222222;
+  }
+  a:hover{
+     background-color: #000000;      
+  }
+
+@media screen and (max-device-width: 599px) {
+  .HeaderText{
+    left: 10%;
+    font-size: 52px;
+  }      
+  .Text{
+    font-size: 18px;
+  }
+  .Info{
+    padding: 20px;
+  }
+  .Image{
+    left: 15%;    
+    width: 60%;
+    height: 200px;
+  }
+}
+@media screen and (min-device-width: 600px) {
+  .Image{
+    width: 35%;
+    height: 200px;
+  }
+}
+</style>

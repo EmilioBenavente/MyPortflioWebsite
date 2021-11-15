@@ -1,0 +1,85 @@
+import { createRouter, createWebHistory} from 'vue-router'
+
+import AboutContent from '../components/AboutContent';
+import Projects from '../components/Projects';
+import HomeContent from '../components/HomeContent';
+import Engine from '../components/Engine';
+import Blogs from '../components/Blogs';
+
+const homeSpaceTag = require('../assets/HomeSpace.mp4');
+const aboutSpaceTag = require('../assets/AboutSpace.mp4');
+const projectsSpaceTag = require('../assets/ProjectsSpace.mp4');
+const engineSpaceTag = require('../assets/EngineSpace.mp4');
+const blogsSpaceTag = require('../assets/BlogsSpace.mp4');
+
+
+
+let SpaceTag = '';
+
+const routes = [
+    {
+        path: '/',
+	redirect: '/Home'
+    },
+    {
+	path: '/About',
+	name: 'About',
+	component: AboutContent,
+	beforeEnter: (to, from, next) => {
+	    console.log('Before -> ' + SpaceTag);
+            SpaceTag = aboutSpaceTag;
+	    console.log('After -> ' + SpaceTag);
+	    next();
+      }
+    },
+    {
+	path: '/Projects',
+	name: 'Projects',
+	component: Projects,
+	beforeEnter: (to, from, next) => {
+	    console.log('Before -> ' + SpaceTag);	    
+            SpaceTag = projectsSpaceTag;
+	    console.log('After -> ' + SpaceTag);
+	    next();
+	}
+    },
+    {
+	path: '/Home',
+	name: 'Home',
+	component: HomeContent,
+	beforeEnter: (to, from, next) => {
+	    console.log('Before -> ' + SpaceTag);
+          SpaceTag = homeSpaceTag;
+	    console.log('After -> ' + SpaceTag);
+	    next();
+	}	
+    },
+    {
+	path: '/Engine',
+	name: 'Engine',
+	component: Engine,
+	beforeEnter: (to, from, next) => {
+	    console.log('Before -> ' + SpaceTag);	    
+            SpaceTag = engineSpaceTag;
+	    console.log('After -> ' + SpaceTag);
+	    next();
+	}	
+    },
+    {
+	path: '/Blogs',
+	name: 'Blogs',
+	component: Blogs,
+	beforeEnter: (to, from, next) => {
+	    console.log('Before -> ' + SpaceTag);
+            SpaceTag = blogsSpaceTag;
+	    console.log('After -> ' + SpaceTag);
+	    next();
+	}	
+    }
+]
+
+const router = createRouter({
+    history: createWebHistory(process.env.BASE_URL), routes
+})
+
+export default router

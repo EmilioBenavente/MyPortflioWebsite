@@ -1,0 +1,46 @@
+<template>
+    <div class='FooterClass'>
+      <div class='Copyright'>
+	<h2>&copy 2021</h2>
+      </div>
+      <FooterButton />
+      <SocialTabs class='socialPosFix'/>
+    </div>
+</template>
+
+<script>
+  import SocialTabs from './SocialTabs'
+  import FooterButton from './FooterButton'
+  export default {
+    name: 'FooterBar',
+    components: {
+      SocialTabs,
+      FooterButton,
+    }
+}
+</script>
+
+<style scoped>
+  .FooterClass{
+    position: relative;
+    bottom: 0px;
+    height: 90px;
+    padding-top: 12px;
+    color: #FFFFFF;
+    font-size: 22px;
+    background-color: #606060;
+    border-top: 10px solid #000000;
+  }
+  .socialPosFix{
+    position: absolute;
+    top: -5px;
+  }
+  .Copyright{
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    top: -15px;
+    width: 20%;
+  }
+  
+</style>

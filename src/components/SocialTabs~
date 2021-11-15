@@ -1,0 +1,12 @@
+<template>
+  <h2 class='needsWork'>Social</h2>
+</template>
+
+<script>
+  export default {
+    name: 'SocialTabs',
+}
+</script>
+
+<style>
+</style>
