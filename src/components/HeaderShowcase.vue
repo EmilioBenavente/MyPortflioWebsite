@@ -32,7 +32,7 @@ video {
     height: 40%;
     width: 56%;
     object-fit: cover;    
-    z-index: -1;
+    z-index: 1;
   }
 
 </style>
