@@ -26,7 +26,7 @@ video {
   }
   .ShowcaseVideo{
     border-radius: 10%;
-    opacity: 90%;
+    opacity: 0.9;
     position: relative;
     top: 130px;
     left: 22%; 
