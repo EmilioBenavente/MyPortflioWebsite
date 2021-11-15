@@ -22,6 +22,7 @@ video {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     position: relative;
+    z-index: 1;
   }
   .ShowcaseVideo{
     border-radius: 10%;
